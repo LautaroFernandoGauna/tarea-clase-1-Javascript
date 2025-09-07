@@ -34,7 +34,7 @@ const lista = [4, 1, 2, 4, 5, 8, 7, 6, 9, 10, 1, 2, 3, 2, 9,100, 8, 99];
 // const pares = lista.filter((n)=> n % 2 === 0 && n <= 10);
 
 // console.log(pares)
-// ME QUEDA ESTO INCONCLUSO 
+
 
 
 
@@ -61,15 +61,15 @@ const lista = [4, 1, 2, 4, 5, 8, 7, 6, 9, 10, 1, 2, 3, 2, 9,100, 8, 99];
 // condicional. Salida esperada:
 // ["par","impar","par","par","impar","par","impar","par","impar","par"]. 
 
-// const mayorSeis= lista.filter(n=> n <= 6);
-// const parImpar= mayorSeis.map(n =>  {
-//     if (n % 2 === 0 ){
-//         return "Par";
-//     }else{
-//         return "Impar";
-//     }
-// });
-// console.log(parImpar)
+const mayorSeis= lista.filter(n=> n <= 6);
+const parImpar= mayorSeis.map(n =>  {
+    if (n % 2 === 0 ){
+        return "Par";
+    }else{
+        return "Impar";
+    }
+});
+console.log(parImpar)
 
 
 // Dada la estructura de datos const arr = [3,6,6,7,12,10,4,13,1]; se pide solo utilizar el método filter: Crear
@@ -77,27 +77,28 @@ const lista = [4, 1, 2, 4, 5, 8, 7, 6, 9, 10, 1, 2, 3, 2, 9,100, 8, 99];
 // Luego pasar esta función al método filter y luego aplicar otro filtro para obtener solo los pares. 
 
 
-// const arr = [3,6,6,7,12,10,4,13,1];
-// const anonimo = arr.filter(n => n >= 10);
-// const par = anonimo.filter(num => num % 2 == 0 );
-// console.log(`Los pares mayores de 10 son : ${par}`);
+const arr = [3,6,6,7,12,10,4,13,1];
+const anonimo = arr.filter(n => n >= 10);
+const par = anonimo.filter(num => num % 2 == 0 );
+console.log(`Los pares mayores de 10 son : ${par}`);
 
 
 // Dado la estructura de datos:
 // se pide: Clonar con map (p. ej., const copia = lista.map(x => x)), luego del clon, mostrar los
 // números que son menores o iguales a 10 y remplaza a los > de 10 por una “X”. Una ayudita!
 
-// const Numbers = [1, 2, 3, 3, 1, 5, 6, 78, 4, 88, 99, 55, 34, 7, 1];
-// const copia = Numbers.map( x=> {
-//     if (x >= 10){
-//         return "X";
-//     }else{
-//         return x
-//     }
-// });
-// console.log(copia)
+const Numbers = [1, 2, 3, 3, 1, 5, 6, 78, 4, 88, 99, 55, 34, 7, 1];
+const copia = Numbers.map( x=> {
+    if (x >= 10){
+        return "X";
+    }else{
+        return x
+    }
+});
+console.log(copia)
 // O SE PUEDE HACER ASI 
 
 const Numbers = [1, 2, 3, 3, 1, 5, 6, 78, 4, 88, 99, 55, 34, 7, 1];
 const copia = Numbers.map( x=> x >= 10 ? "x" : x);
 console.log(copia)
+
