@@ -51,11 +51,37 @@
 
 // 5) Dada una lista de notas {curso, nota}, devolvé {curso: promedio} sin recorrer dos veces (acumulá sumas y
 // conteos en el mismo reduce).Entrada de ejemplo: 
+// Salida esperada: { A: { sum: 18, count: 2, promedio: 9 }, B: { sum: 6, count: 1, promedio: 6 } } 
+
+const Lista = [
+{c:"A",n:8},
+{c:"B",n:6},
+{c:"A",n:10}
+];
+
+const notas = Lista.reduce((accu,{c,n})=> {
+    if (!accu[c]){
+
+        accu[c]={sum: 0, count: 0, promedio: 0};
 
 
+    }
+    accu[c].sum +=n; 
+    accu[c].count+=1;
+    accu[c].promedio= accu[c].sum / accu[c].count; 
+    return accu
+},{});
+console.log(notas)
 
+// 6) Dada el número de DNI de una persona, se pide calcular la suma de de sus números.
+// dni = '20385978'; Salida esperada: 42
 
-
+// const dni = '20385978'
+// const suma = [...dni].reduce((accu,val)=> {
+//     accu= Number(accu) + Number (val);
+//     return accu
+// });
+// console.log(suma)
 
 
 
